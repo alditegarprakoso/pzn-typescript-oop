@@ -10,6 +10,10 @@ describe("Class", () => {
       this.id = id;
       this.name = name;
     }
+
+    sayHello (name: string): void {
+      console.log(`Hello ${name}, my name is ${this.name}`);
+    }
   }
 
   class Order {}
@@ -30,5 +34,11 @@ describe("Class", () => {
 
     console.log(customerOne);
     console.log(customerTwo);
+  });
+
+  it("Should can can have method", () => {
+    const customer: Customer = new Customer(2, "Aldi");
+    customer.sayHello("Tegar");
+
   });
 });
